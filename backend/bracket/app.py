@@ -82,27 +82,26 @@ table_of_contents = "\n\n".join(
 
 
 description = f"""
-### Description
-This API allows you to do everything the frontend of [Bracket](https://github.com/evroon/bracket)
-allows you to do (the frontend uses this API as well).
+### Beskrivelse
+Dette API-et lar deg gjøre alt frontend i [Bracket](https://github.com/evroon/bracket) lar deg gjøre (frontend bruker dette API-et).
 
-Fore more information, see the [documentation](https://docs.bracketapp.nl).
+For mer informasjon, se [dokumentasjonen](https://docs.bracketapp.nl).
 
-### Table of Contents
-*(links only work for [ReDoc](https://api.bracketapp.nl/redoc), not for Swagger UI)*
+### Innholdsfortegnelse
+*(lenkene fungerer kun for [ReDoc](https://api.bracketapp.nl/redoc), ikke for Swagger UI)*
 
 {table_of_contents}
 
-### Links
+### Lenker
 GitHub: <https://github.com/evroon/bracket>
 
-Docs: <https://docs.bracketapp.nl>
+Dokumentasjon: <https://docs.bracketapp.nl>
 
 Demo: <https://www.bracketapp.nl/demo>
 
-API docs (Redoc): <https://api.bracketapp.nl/redoc>
+API-dokumentasjon (Redoc): <https://api.bracketapp.nl/redoc>
 
-API docs (Swagger UI): <https://api.bracketapp.nl/docs>
+API-dokumentasjon (Swagger UI): <https://api.bracketapp.nl/docs>
 """
 
 app = FastAPI(
@@ -110,7 +109,7 @@ app = FastAPI(
     docs_url="/docs",
     version="1.0.0",
     lifespan=lifespan,
-    summary="API for Bracket, an open source tournament system.",
+    summary="API for Bracket, et åpent turneringssystem.",
     description=description,
     license_info={
         "name": "AGPL-3.0",
@@ -146,7 +145,7 @@ async def validation_exception_handler(request: Request, exc: HTTPException) -> 
 
 @app.exception_handler(Exception)
 async def generic_exception_handler(request: Request, exc: Exception) -> JSONResponse:
-    return JSONResponse({"detail": "Internal server error"}, status_code=500)
+    return JSONResponse({"detail": "Intern serverfeil"}, status_code=500)
 
 
 app.mount("/static", StaticFiles(directory="static"), name="static")

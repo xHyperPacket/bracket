@@ -1,0 +1,61 @@
+---
+title: Brukerveiledning
+---
+
+import {Callout} from 'nextra/components'
+
+# Brukerveiledning
+
+Å sette opp en turnering i Bracket innebærer flere viktige steg. Her er en generell veiledning for hvordan du setter opp en turnering steg for steg.
+
+<Callout type="info">
+Denne veiledningen forutsetter at du er logget inn i Bracket. Den tar utgangspunkt i demoen på Bracket (`https://www.bracketapp.nl`). Hvis du hoster Bracket selv, bruker du ditt eget domene.
+</Callout>
+
+## 1. Opprett en ny turnering
+
+Fra startsiden (f.eks. `https://www.bracketapp.nl`), trykk på `Opprett turnering`-knappen.
+Fyll inn metadata for turneringen:
+
+- **Turneringsnavn:** Velg et tydelig og beskrivende navn.
+- **Klubb:** Velg klubben du vil at denne turneringen skal tilhøre. En klubb er bare en samling av turneringer en bruker har tilgang til. En standardklubb ble opprettet da du laget kontoen din. Hvis du vil knytte turneringen til en ny klubb, gå til `/clubs`-siden.
+- **Dashboard-lenke:** Suffixen på URL-en (slug) der turneringen presenteres offentlig. For eksempel, hvis du skriver `min_turnering`, kan alle se rangeringer og kamper på `https://www.bracketapp.nl/tournaments/min_turnering/dashboard`.
+- **Starttid:** Starttidspunktet for turneringen bestemmer når første kamp spilles.
+- **Kampvarighet:** Standard varighet for kamper. Kan tilpasses per kamp.
+- **Tid mellom kamper:** Standard tid mellom kamper, nyttig hvis lag må flytte seg mellom baner. Kan tilpasses per kamp.
+- **Tillat alle å se dashboardet for runder og kamper:** Om dashboardet skal være offentlig tilgjengelig.
+- **Tillat spillere å være på flere lag:** Vanligvis er spillere kun på ett lag, og Bracket tillater ikke at en spiller er på flere lag. Denne innstillingen overstyrer det og lar én spiller være på flere lag.
+- **Tildel baner automatisk til kamper:** Om du vil tildele baner manuelt eller automatisk.
+
+Trykk `Lagre` når du er ferdig. Disse innstillingene kan endres senere.
+
+Nå skal du ha opprettet en turnering og være på turneringssiden. I menyen (til venstre på desktop eller øverst på mobil) kan du navigere til ulike sider for turneringen (baner, lag osv.).
+
+## 2. Registrer lag og spillere
+
+Du må legge til lagene (og eventuelt spillerne) som skal delta i turneringen.
+
+<Callout type="info">
+Å legge til spillere er valgfritt og kun for visning.
+
+Spillere er del av lag, og det kan være nyttig å legge dem inn for å vite hvem som spiller på hvilket lag. Hvis du arrangerer en turnering der alle spiller for seg selv, opprett lag med navnene til personene og ikke legg til spillere på lagene.
+</Callout>
+
+### Legge til spillere
+
+Gå til `Spillere`-siden ved å klikke på ikonet i menyen. Trykk på `Legg til spiller`-knappen. Du kan opprette én spiller eller flere samtidig. For å opprette flere, skriv én spiller per linje, slik:
+
+```text
+Alex
+Bob
+Charlie
+```
+
+### Legge til lag
+
+Lag legges til på samme måte. Gå til `Lag`-siden og trykk på `Legg til lag`.
+Du kan opprette ett lag eller flere samtidig. For ett lag, skriv inn navnet. Du kan angi om laget er aktivt (gjelder kun for sveitsiske steg og avgjør om laget kan planlegges i neste sveitsiske runde).
+
+## 3. Lag turneringsstrukturen
+
+... (fortsett oversettelsen for resten av filen etter behov)

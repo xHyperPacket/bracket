@@ -5,14 +5,20 @@ import { initReactI18next } from 'react-i18next';
 
 i18n
   .use(Backend)
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    lng: 'nb',
+    fallbackLng: 'nb',
+    supportedLngs: ['nb'],
     defaultNS: 'common',
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      // Deaktiver språkdeteksjon
+      order: [],
+      caches: []
+    }
   });
 
 export default i18n;
